@@ -1,0 +1,32 @@
+name: moon_art
+description: Project for Chickago open api
+publish_to:
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.3 <4.0.0'
+
+dependencies:
+  dio: ^5.2.1+1
+  json_serializable: ^6.6.0
+  json_annotation: ^4.8.1
+  get_it: ^7.2.0
+  logger: any
+  flutter:
+    sdk: flutter
+
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  build_runner: '>=2.3.0 <4.0.0'
+
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+
+flutter:
+  uses-material-design: true
