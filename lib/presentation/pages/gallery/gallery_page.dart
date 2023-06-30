@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 
 import '../../../di/service_locator.dart';
 import '../../../domain/models/art.dart';
-import 'home_controller.dart';
+import 'gallery_controller.dart';
 
-class HomePage extends StatelessWidget {
-  final homeController = getIt<HomeController>();
+class Gallery extends StatelessWidget {
+
+  Gallery({super.key});
+  final homeController = getIt<GalleryController>();
 
   @override
   Widget build(BuildContext context) {
