@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 import '../../di/service_locator.dart';
@@ -33,10 +34,10 @@ class HomePage extends StatelessWidget {
             return ListView.builder(
               itemCount: snapshot.data?.length,
               itemBuilder: (context, index) {
-                final art = snapshot.data![index];
+                final art = snapshot.data?[index];
                 return ListTile(
-                  title: Text(art.title ?? ''),
-                  subtitle: Text(art.origin ?? ''),
+                  title: Text(art?.title ?? ''),
+                  subtitle: Text(art?.origin ?? ''),
                 );
               },
             );
