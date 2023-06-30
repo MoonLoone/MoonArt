@@ -5,7 +5,7 @@ import 'package:moon_art/data/network/rest_client.dart';
 
 import '../data/network/api/art_api.dart';
 import '../data/repository/art_repository.dart';
-import '../presentation/pages/home_controller.dart';
+import '../presentation/pages/home/home_controller.dart';
 
 final getIt = GetIt.instance;
 

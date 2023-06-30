@@ -1,18 +1,18 @@
 
 import 'package:flutter/material.dart';
+import 'package:moon_art/presentation/navigation/bottom_navigation.dart';
 
-import '../../di/service_locator.dart';
-import '../../domain/models/art.dart';
+import '../../../di/service_locator.dart';
+import '../../../domain/models/art.dart';
 import 'home_controller.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({Key? key}): super(key: key);
   final homeController = getIt<HomeController>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Home page"),),
+      bottomNavigationBar: CustomBottomNavigationBar(),
       body: FutureBuilder<List<Art>>(
         future: homeController.getArts(),
         builder: (context, snapshot){
