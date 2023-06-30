@@ -1,19 +1,18 @@
-import 'dart:developer';
-import 'dart:developer' as developer;
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:moon_art/presentation/navigation/routes.dart';
 
-import '../../../di/service_locator.dart';
 import '../../navigation/bottom_navigation.dart';
 
 class MainPage extends StatefulWidget {
+
+  const MainPage({super.key});
+
   @override
   State<StatefulWidget> createState() => _MainPageState();
 }
 
 class _MainPageState extends State<MainPage> {
-  var _currentWidget = "home";
+  var _currentWidget = Routes.bottomNavigator.keys.first;
 
   void _selectWidget(String newWidget) {
     setState(() => _currentWidget = newWidget);
