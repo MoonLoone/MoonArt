@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:moon_art/presentation/navigation/bottom_navigation.dart';
 
 import '../../../di/service_locator.dart';
 import '../../../domain/models/art.dart';
@@ -11,11 +10,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: CustomBottomNavigationBar(),
-      body: FutureBuilder<List<Art>>(
+    return FutureBuilder<List<Art>>(
         future: homeController.getArts(),
-        builder: (context, snapshot){
+        builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
@@ -43,9 +40,6 @@ class HomePage extends StatelessWidget {
             );
           }
           return Container();
-        },
-      ),
-    );
+        });
   }
-
 }
