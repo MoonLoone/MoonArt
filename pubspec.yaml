@@ -8,6 +8,8 @@ environment:
   sdk: '>=3.0.3 <4.0.0'
 
 dependencies:
+  awesome_dio_interceptor: ^1.0.0
+  shared_preferences: any
   dio: ^5.2.1+1
   json_serializable: ^6.6.0
   json_annotation: ^4.8.1

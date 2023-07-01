@@ -10,8 +10,10 @@ final getIt = GetIt.instance;
 
 Future<void> setup() async {
   getIt.registerSingleton(Dio());
-  getIt.registerSingleton(RestClient(getIt<Dio>()));
-  getIt.registerSingleton(ArtApi(restClient: getIt<RestClient>()));
+  getIt.registerSingleton(ArtClient(getIt<Dio>()));
+  getIt.registerSingleton(ArtApi(restClient: getIt<ArtClient>()));
   getIt.registerSingleton(ArtRepository(getIt.get<ArtApi>()));
   getIt.registerSingleton(GalleryController());
+
+  getIt.get<ArtRepository>().getArtToken();
 }
